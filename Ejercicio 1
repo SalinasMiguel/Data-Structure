@@ -1,0 +1,73 @@
+
+
+
+
+/******************************************************************************
+
+Diseñar un programa que determine si un numero es positivo perfecto y 
+analizar la suma de sus divisores propios y comparar con el numero digital
+
+*******************************************************************************/
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int n, p;
+int perfecto=0;
+int m=3;
+
+
+int main()
+{ cout<<"w-w Comprobacion de numeros perfectos w-w"<<endl;
+
+while(m<4){
+cout<<" Ingrese los numeros positivos a comprobar si son perfectos"<<endl;
+
+cin>>n;
+int v[n];
+
+  if(n<0)
+  {
+      cout<<"El numero es menor que cero por favor ingrese el numero positivo no negativo"<<endl;
+      
+  }
+  
+  else {m=5;}
+    
+}
+   if(n>0){
+      cout<<"Vamos a comprobar"<<endl;
+      for(int i=1; i<n; i++){
+          
+          p=n%i;
+          
+          if(p==0){
+             perfecto=perfecto+i;
+             
+             v[i]=i;
+          }       
+      }
+         for(int i=1; i<n; i++){
+              if(perfecto==n){
+                  cout<<"Este numero si es un positivo perfecto ya que "<<n<<" y "<< p<<"son iguales"<<endl;
+                  
+                  cout<<"Los divisores del numero son:"<<endl;
+                  
+                  for(int i=1; i<n; ++i){
+                      cout<< v[i];
+                  }
+                  
+              }
+              
+              else{
+                  cout<<"El numero no es perfecto"<<endl;
+              }
+          }
+          
+          
+     
+      
+   }
+    return 0;
+}
+
