@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+using namespace std; 
+int a, b;
+
+int limite;
+int n=0;
+int mcd=1;
+
+int main()
+{
+    std::cout<<"Hallaremos el minimo comun multiplo"<<endl;
+    cout<<"Ingresar 2 numeros, recuerda deben ser positivos."<<endl;
+ do{
+     
+ cin>>a>>b;
+ 
+  
+      if (a>0 && b>0)
+     {
+         if(a>b){ limite=a;
+             
+         }
+         else{ limite=b;
+             
+         }
+             for (int i = 1; i <= limite; i++) {
+            if (a % i == 0 && b % i == 0) {
+                mcd = mcd * i; // Guardamos el divisor común más alto encontrado
+            }
+             }
+            cout<<"El valor del mcd es: "<<endl;
+          
+            cout<<mcd<<endl;
+            
+            n=n+3;
+     }
+     else{
+         cout<<"Escribe un numero positivo"<<endl;
+     }
+ n++;
+}while(n<3);
+    return 0;
+}
