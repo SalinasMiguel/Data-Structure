@@ -1,25 +1,33 @@
 #include <iostream>
 using namespace std;
 
-int n, primo; 
+int n, primo, p;
+int c=0; 
 int m=0;
 int main()
 {  do {
-    cout<<"Ingrese el numero para ver si es primo";
-    cinn>>n;
+    cout<<"Ingrese el numero para ver si es primo"<<endl;
+    cin>>n;
     
-     if (n>0)
+     if (n<0)
      cout<<"Tiene que ser positivo escribe de nuevo"<<endl;
       else {
           cout<<"Se analizara el numero"<<endl;
          
-          for (int i=1; i<=n; i++)
+          for (int i=1; i<n+1; i++)
           {
+              p=n%i;
               
+              if(p==0){
+                  c=c+1;
+              }
           }
+          if(c==2)
+          {cout<<"El numero es primo "<<endl;}
+          else{ cout<<" El numero no es primo"<<endl;}
       }
-    m++
-} while (m<3)   
+    m++;
+} while (m<3);   
 
     return 0;
 }
