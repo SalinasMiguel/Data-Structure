@@ -1,0 +1,22 @@
+//Hacer un programa que determine por medio de la longitud de lados que tipo de triangulo es: //
+#include <iostream>
+using namespace std;
+ int a, b, c;
+int main()
+{
+    cout<<"Ingrese los 3 lados de un posible triangulo"<<endl;
+    cin>>a>>b>>c;
+    cout<<"Comprobaremos los posibles lados y te diremos si es un triangulo, espere"<<endl;
+    
+    if(a==b && b==c)
+   { cout<<"El traingulo es equilatero"<<endl;
+   }
+   else if(a==b || b==c || c==a){
+       cout<<"El triangulo es isoceles"<<endl;
+   }
+   else{
+       cout<<"El triangulo es rectangulo"<<endl;
+   }
+
+    return 0;
+}
