@@ -1,0 +1,23 @@
+///Hacer la suma de los primeros n numeros con iteracion y n matematico/
+#include <iostream>
+using namespace std;
+int n, suma=0;
+int i=0;
+int main(){
+    cout<<"Cantidad de numeros naturales que se quiere sumar(en orden)"<<endl;
+    
+    
+    while(i<3){
+      cin>>n; 
+      if(n<0){cout<<"Escribe los numeros naturales no negativos"<<endl;}
+      else{
+          for(int i=0; i<n+1; i++){
+              suma=suma+i;
+          }
+           sumamate= n*(n+1)/2;
+          cout<<"La suma de los primeros n numeros es con itineracio: "<<suma<<endl;
+          cout<<"La suma de los primeros n numeros es con suma matematica: "<<sumamate<<endl;
+      n=n+3;}
+    }
+    return 0;
+}
