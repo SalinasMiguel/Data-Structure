@@ -1,0 +1,36 @@
+// Determinar si un numero es palindromo sin un string//
+
+#include <iostream>
+using namespace std;
+
+bool esPalindromo(int n) {
+    // Casos base: negativos y números que terminan en 0 (excepto el 0)
+    if (n < 0 || (n % 10 == 0 && n != 0)) {
+        return false;
+    }
+
+    int numeroOriginal = n;
+    long long numeroInvertido = 0;
+
+    while (n > 0) {
+        int ultimoDigito = n % 10;
+        numeroInvertido = (numeroInvertido * 10) + ultimoDigito;
+        n /= 10; 
+    }
+
+    return numeroOriginal == numeroInvertido;
+}
+
+int main() {
+    int numero;
+    cout << "Introduce un número: "<<endl;
+    cin >> numero;
+
+    if (esPalindromo(numero)) {
+        cout << numero << " es un palíndromo." << endl;
+    } else {
+        cout << numero << " no es un palíndromo." << endl;
+    }
+
+    return 0;
+}
