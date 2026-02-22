@@ -1,0 +1,45 @@
+//Search MCM with 2 numbers //
+
+#include <iostream>
+using namespace std;
+int mcd, mcm;
+int a, b, mayor;
+int n=0;
+
+int main()
+{
+    std::cout<<"_____Sacar minimo comun multiplo_____"<<endl;
+    cout<<"Inserta los numeros para hacer la formula."<<endl;
+    
+    do{
+        cin>>a>>b;
+        
+        if (a>b){mayor=a;}
+        if (b>a){mayor=b;}
+        
+        if(a<0)
+        {cout<<"Solo usa los numeros positivos"<<endl;}
+        else if(b<0){
+            cout<<"solo usa numeros positivos"<<endl;}
+            
+            else{
+                
+                for(int i=1; i<mayor;i++)
+                {
+                 if(a%i==0 && b%i==0)
+                 mcd=i;
+                }
+                
+                mcm=(a*b)/mcd;
+                
+                n=n+3;
+                
+                cout<<"El mcm es: "<< mcm<<endl;
+            }
+        
+        
+        n++;
+    }while(n<3);
+
+    return 0; }
+}
